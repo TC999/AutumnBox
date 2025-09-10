@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
@@ -32,7 +32,7 @@ jobs:
       run: dotnet test src/
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Canary-Artifact
         path: AutumnBox-Canary # or path/to/artifact
